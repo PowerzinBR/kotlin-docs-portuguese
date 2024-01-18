@@ -1,0 +1,36 @@
+# Arquivos e diretórios específicos do Kotlin e Gradle
+build/
+.idea/
+*.iml
+.gradle/
+
+# Arquivos de configuração específicos do Gradle
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Arquivos e diretórios de saída do Kotlin
+out/
+buildSrc/build/
+buildSrc/.gradle/
+
+# Arquivos de configuração do IntelliJ IDEA
+*.iws
+*.ipr
+*.iws
+*.iws.ipr
+
+# Cache do IntelliJ IDEA
+.idea/caches/
+
+# Logs do IntelliJ IDEA
+.idea/logs/
+
+# Arquivos temporários do IntelliJ IDEA
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Arquivos de projeto do Eclipse
+.settings/
+
+# Arquivos de configuração do VS Code
+.vscode/
