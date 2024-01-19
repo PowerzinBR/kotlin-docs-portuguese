@@ -95,4 +95,4 @@ O correto seria:
 ```
 
 Ah, e se você está perguntando qual foi o resultado:
-<img src="./img/CompilerKotlin.png">
+<img src="../img/CompilerKotlin.png">
