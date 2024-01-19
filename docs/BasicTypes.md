@@ -31,4 +31,68 @@ No total, o Kotlin tem os seguintes tipos básicos:
 | Strings | `String` |
 
 
-   
+# Prática
+```kotlin
+fun main() {
+    val a = 1000 // Int
+    val b = "power" // String
+    val c = 3.14 // Double
+    val d = 100_000_000_000_000 // Long
+    val e = false // Boolean
+    val f = '\n' // Char
+
+
+```
+
+Então, quando rodei o arquivo...
+```bash
+InferTypes.kt:15:16: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val a = Int: 1000 // Int
+               ^
+InferTypes.kt:16:19: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val b = String: "power" // String
+                  ^
+InferTypes.kt:17:19: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val c = Double: 3.14 // Double
+                  ^
+InferTypes.kt:18:17: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val d = Long: 100_000_000_000_000 // Long
+                ^
+InferTypes.kt:19:20: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val e = Boolean: false // Boolean
+                   ^
+InferTypes.kt:20:17: error: unexpected tokens (use ';' to separate expressions on the same line)
+    val f = Char: '\n' // Char
+```
+
+Então vamos resolver isso de forma rápida,<br />
+ah, eu entendo o erro agora.
+Eu botei defini as variáveis **imutáveis** (expliquei no capítulo anterior) desse jeito aqui:
+
+```kotlin
+fun example() {
+    val a = Int: 1000 // Int
+    val b = String: "power" // String
+    val c = Double: 3.14 // Double
+    val d = Long: 100_000_000_000_000 // Long
+    val e = Boolean: false // Boolean
+    val f = Char: '\n' // Char
+
+    println("${a + b} | ${c + d} | ${d + e + f} ")
+}
+```
+E isso está muito errado!
+O correto seria:
+```kotlin
+    val a: Int = 1000 // Int
+    val b: String = "power" // String
+    val c: Double = 3.14 // Double
+    val d: Long = 100_000_000_000_000 // Long
+    val e: Boolean = false // Boolean
+    val f: Char = '\n' // Char
+
+    println("$a | $b | $c | $d | $e | $f")
+```
+
+Ah, e se você está perguntando qual foi o resultado:
+<img src="./img/CompilerKotlin.png">
